@@ -2,10 +2,10 @@
 set -eu
 
 ### GCC
-sudo apt-get install -y "g++-14=${VERSION}"
+sudo apt install -y "g++-14=${VERSION}"
 
 ### Libraries
-sudo apt-get install -y build-essential pigz pbzip2
+sudo apt install -y build-essential pigz pbzip2
 
 ./sub-installers/abseil.sh
 ./sub-installers/AC-Library.sh
@@ -14,5 +14,4 @@ sudo apt-get install -y build-essential pigz pbzip2
 ./sub-installers/GMP.sh
 ./sub-installers/unordered_dense.sh
 
-sudo apt-get remove -y build-essential pigz pbzip2
-sudo apt-get autoremove -y
+sudo apt purge -y --auto-remove build-essential pigz pbzip2
