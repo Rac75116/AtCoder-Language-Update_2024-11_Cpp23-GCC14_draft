@@ -14,5 +14,4 @@ sudo apt-get install -y build-essential pigz pbzip2
 ./sub-installers/GMP.sh
 ./sub-installers/unordered_dense.sh
 
-sudo apt-get remove -y build-essential pigz pbzip2
-sudo apt-get autoremove -y
+sudo apt-get remove -y --auto-remove build-essential pigz pbzip2
